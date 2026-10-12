@@ -8,7 +8,10 @@
 <meta property="og:title" content="Nash Koh — криптокошелёк в Telegram">
 <meta property="og:description" content="GRAM и USDT, переводы, чеки, P2P с защитой сделки и Nash Pay для ботов.">
 <meta name="theme-color" content="#0d0f12">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314171c'/%3E%3Cpath d='M32 10 52 30 32 54 12 30Z' fill='%23d9a441'/%3E%3Cpath d='M12 30h40M32 30v24' stroke='%2314171c' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" href="icon.png?v=3">
+<link rel="apple-touch-icon" href="icon.png?v=3">
+<meta property="og:image" content="https://nashkoh.github.io/logo.png?v=3">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +41,7 @@ section{padding-block:clamp(56px,9vw,104px)}
 .nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(13,15,18,.78);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:60px}
 .brand{display:flex;align-items:center;gap:10px;font:700 17px var(--display)}
-.brand svg{width:28px;height:28px}
+.brand img{width:32px;height:32px;border-radius:9px;border:1px solid #333a44}
 .nav-links{display:flex;gap:22px;color:var(--muted);font-weight:600;font-size:15px}
 .nav-links a:hover{color:var(--text)}
 @media (max-width:720px){.nav-links{display:none}}
@@ -69,11 +72,11 @@ section{padding-block:clamp(56px,9vw,104px)}
 .chat{background:#16191f;border-radius:24px;padding:16px;display:grid;gap:10px;min-width:0}
 .chat-head{display:flex;align-items:center;gap:10px;padding-bottom:10px;border-bottom:1px solid var(--line)}
 .ava{width:36px;height:36px;border-radius:50%;background:#1d2127;display:grid;place-items:center;border:1px solid #333a44}
-.ava svg{width:20px}
+.ava{overflow:hidden}.ava img{width:100%;height:100%;object-fit:cover}
 .chat-head b{font-size:15px}.chat-head small{display:block;color:var(--muted);font-size:12px;line-height:1.2}
 .msg{background:#20242c;border-radius:16px 16px 16px 6px;padding:10px;font-size:14px;line-height:1.45}
-.recv{border-radius:12px;aspect-ratio:16/9;display:grid;place-items:center;align-content:center;position:relative;overflow:hidden;
-  background:linear-gradient(135deg,#5fd1aa 0%,#2b9a78 45%,#0f4a3d 100%)}
+.recv{width:100%;object-fit:cover;border-radius:12px;aspect-ratio:4/3;display:grid;place-items:center;align-content:center;position:relative;overflow:hidden;
+  display:block;background:#141518}
 .recv .pattern{position:absolute;inset:0;opacity:.13;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='60' viewBox='0 0 70 60'%3E%3Cg fill='none' stroke='white' stroke-width='3'%3E%3Cpath d='M20 12h30M35 12v32'/%3E%3Cellipse cx='35' cy='22' rx='15' ry='4.5'/%3E%3C/g%3E%3C/svg%3E")}
 .recv .amt{position:relative;display:flex;align-items:center;gap:10px;font:700 clamp(30px,8vw,44px)/1 var(--display)}
 .recv .amt svg{height:.9em}
@@ -157,7 +160,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;
 <nav class="nav">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="Nash Koh">
-      <svg viewBox="0 0 64 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff3c4"/><stop offset=".45" stop-color="#e2ad4b"/><stop offset=".6" stop-color="#9d661a"/><stop offset="1" stop-color="#f3d27a"/></linearGradient></defs><path d="M32 6 56 30 32 58 8 30Z" fill="url(#g)"/><path d="M8 30h48M32 30v28M20 18l12 12 12-12" stroke="#0d0f12" stroke-width="2.5" fill="none"/></svg>
+      <img src="icon.png?v=3" alt="" width="32" height="32">
       <span class="metal">Nash Koh</span>
     </a>
     <div class="nav-links">
@@ -189,19 +192,12 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:20px;
     <div class="phone" aria-hidden="true">
       <div class="chat">
         <div class="chat-head">
-          <div class="ava"><svg viewBox="0 0 64 64"><path d="M32 6 56 30 32 58 8 30Z" fill="#d9a441"/><path d="M8 30h48M32 30v28" stroke="#1d2127" stroke-width="4"/></svg></div>
+          <div class="ava"><img src="icon.png?v=3" alt=""></div>
           <div><b>Nash Koh</b><small>бот</small></div>
         </div>
         <div class="msg">
-          <div class="recv">
-            <div class="pattern"></div>
-            <div class="amt metal">
-              <svg viewBox="0 0 40 40" aria-hidden="true"><defs><linearGradient id="m" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".45" stop-color="#cfd3db"/><stop offset=".55" stop-color="#8a909b"/><stop offset="1" stop-color="#eef0f3"/></linearGradient></defs><g fill="url(#m)"><rect x="4" y="3" width="32" height="7" rx="2"/><rect x="15" y="3" width="10" height="34" rx="2.5"/></g><ellipse cx="20" cy="15" rx="17" ry="5" fill="none" stroke="url(#m)" stroke-width="3"/></svg>
-              2.5
-            </div>
-            <div class="usd metal">$2.50</div>
-          </div>
-          <p class="cap">📥 <b>Вы получили</b> 💵 <b>2.5 USDT</b> ($2.50)<br>От: <b>Game Bot</b></p>
+          <img class="recv" src="card.jpg?v=3" alt="">
+          <p class="cap">💎 <b>Nash Koh</b> — ваш криптокошелёк в Telegram<br>GRAM и USDT всегда под рукой</p>
         </div>
         <div class="chips"><span class="chip">👤 Кабинет</span><span class="chip">💸 Перевод</span><span class="chip">🧾 Чеки</span><span class="chip">🤝 P2P</span></div>
       </div>
@@ -365,7 +361,7 @@ const LINKS = {
   chat:    "https://t.me/NashKoh_ofic",
   support: "https://t.me/Nashkoh_bot",
   help:    "https://telegra.ph/Otvety-na-chastye-voprosy-kak-popolnit-i-vyvesti-skolko-stoit-skolko-zhdat-i-chto-delat-esli-chto-to-poshlo-ne-tak-10-11",
-  paydocs: "https://telegra.ph/Otvety-na-chastye-voprosy-kak-popolnit-i-vyvesti-skolko-stoit-skolko-zhdat-i-chto-delat-esli-chto-to-poshlo-ne-tak-10-11",
+  paydocs: "",   // ссылка на инструкцию Nash Pay в Telegraph
 };
 document.querySelectorAll("[data-link]").forEach(a => {
   const url = LINKS[a.dataset.link];
